@@ -1,7 +1,3 @@
-/*
-* @description 没什么, 就是一堆中间件
-*/
-
 // ##引入依赖包(*.js)+
 var express = require('express');
 var path = require('path');

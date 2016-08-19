@@ -1,0 +1,10 @@
+{
+  "name": "yurnero",
+  "version": "0.0.1",
+  "moduleName": "Yurnero",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.6.3",
+    "jquery": "~2.1.4"
+  }
+}
