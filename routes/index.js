@@ -3,7 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+	// ##返回[index.ejs],并传递变量[title]
+  res.render('index', { 
+  	title: 'Express',
+  	text: 'Text'
+  	});
 });
+
 
 module.exports = router;
