@@ -5,7 +5,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var engine = require('ejs-mate');
 
 // ##引入自定义中间件
 var routes = require('./routes/index'); // ##路由级中间件
@@ -13,13 +12,6 @@ var users = require('./routes/users'); // ##路由级中间件
 
 // ##创建一个Express应用, 是express模块的入口
 var app = express();
-
-// use ejs-locals for all ejs templates
-app.engine('ejs', engine);
-
-// 这里设置根目录的views文件夹为渲染视图所在文件夹;设置view引擎为ejs
-app.set('views', path.join(__dirname, 'views')); // ##__dirname表示当前文件所在路径
-app.set('view engine', 'ejs');
 
 // ##app.use([path,]function[,function...])该函数用来挂载中间件
 // ##这里默认[path="/"], 所以对于此app的每一个请求, 下面挂在的中间件都会依次执行
