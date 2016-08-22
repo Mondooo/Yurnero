@@ -13,6 +13,10 @@ import i18nConfig from './i18n/config';
 // service
 import commonSer from './common/commonSer';
 import helloSer from './auth/helloSer';
+import qService from './services/q-service';
+
+// factory
+import accountRes from './resources/account-res';
 
 // directive
 import headerDirect from './common/header/headerDirect';
@@ -22,11 +26,12 @@ import homeCtrl from './auth/home/homeCtrl';
 import accountCtrl from './account/accountCtrl';
 
 angular.module('webProject',
-  ['ngAnimate', 'ngCookies', 'ngSanitize', 'ui.router', 'ngMaterial'])
+  ['ngAnimate', 'ngCookies', 'ngSanitize', 'ui.router', 'ngMaterial', 'ngResource'])
 
   // 配置全局常量
   .constant('lcConfig', config)
   .constant('moment', window.moment)
+  .constant('BASE_URL', 'http://localhost:3000/api')
 
   // 基础配置
   .config(httpConfig)
@@ -38,6 +43,10 @@ angular.module('webProject',
   // services 初始化
   .service('commonSer', commonSer)
   .service('helloSer', helloSer)
+  .service('qService', qService)
+
+  // factory 初始化
+  .factory('accountRes', accountRes)
 
   // directive 初始化
   .directive('lcHeader', headerDirect)

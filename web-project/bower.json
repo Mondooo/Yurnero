@@ -12,7 +12,8 @@
     "jquery": "~2.1.4",
     "moment": "~2.10.3",
     "font-awesome": "~4.6.3",
-    "weui": "~0.4.3"
+    "weui": "~0.4.3",
+    "angular-resource": "~1.5.8"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"

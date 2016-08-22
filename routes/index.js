@@ -1,12 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/api/hello', function(req, res, next) {
-  res.send('index', {
-  	title: 'Express',
-  	text: 'Text'
-  	});
+router.get('/api/account', function(req, res, next) {
+	var map = {"data":{id:1,name:"test"}};
+	res.set({'Content-Type':'text/json','Encodeing':'utf8'});  
+  	res.send(map);
 });
 
 module.exports = router;

@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 // ##引入自定义中间件
 var routes = require('./routes/index'); // ##路由级中间件
 var users = require('./routes/users'); // ##路由级中间件
+var config = require('./config');
 
 // ##创建一个Express应用, 是express模块的入口
 var app = express();
@@ -22,6 +23,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public'))); // ##定义项目的静态资源路径, 这是Express唯一的内置中间件
+
+// 跨域支持
+app.all('/api/*', (req, res, next) => {
+  // var origin = req.headers.origin;
+  // if (config.whiteOrigins.indexOf(origin) !== -1) {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:9000');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, OPTIONS, DELETE');
+  // }
+  next();
+});
 
 app.use('/', routes); // ##挂载自定义的路由中间件到应用
 app.use('/users', users);

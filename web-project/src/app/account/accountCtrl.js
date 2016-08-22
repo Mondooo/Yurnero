@@ -1,7 +1,7 @@
-export default ($scope, helloSer) => {
-	helloSer.getData().then((success) => {
-		console.log(success);
+export default ($scope, accountRes, qService) => {
+	qService.httpGet(accountRes.account, {}, {}).then((data) => {
+		console.log(data);
 	}, (err) => {
-		console.log(err);
+
 	});
 };
