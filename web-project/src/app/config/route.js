@@ -1,4 +1,3 @@
-
 export default ($stateProvider, $urlRouterProvider, $locationProvider) => {
   'ngInject';
 
