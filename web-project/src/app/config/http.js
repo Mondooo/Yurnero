@@ -40,7 +40,7 @@ export default ($httpProvider, lcConfig) => {
           if (/\.html/.test(response.config.url)) {
               return response;
           } else {
-              return response.data; //坑爹的地方, 业界标准, RESTful返回的数据名称叫[data].
+              return response; //坑爹的地方, 业界标准, RESTful返回的数据名称叫[data].
           }
       },
       responseError: function(response) {

@@ -32,6 +32,17 @@ export default ($q) => {
 			* return deferred.promise;
 			*/
 		},
+		httpPost: (resource, parameters, headers, body) => {
+			return $q((resolve, reject) => {
+				resource(headers).post(parameters,body,
+				(value, responseHeaders) => {
+					resolve(value);
+				}, 
+				(httpResponse) => {
+					reject(httpResponse);
+				});
+			});
+		},
 
 	};
 };

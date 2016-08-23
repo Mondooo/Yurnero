@@ -20,7 +20,7 @@ import homeCtrl from './auth/home/homeCtrl';
 import accountCtrl from './account/accountCtrl';
 
 angular.module('webProject',
-  ['ngAnimate', 'ngCookies', 'ngSanitize', 'ui.router', 'ngMaterial', 'ngResource'])
+  ['ngAnimate', 'ngCookies', 'ngSanitize', 'ui.router', 'ngMaterial', 'ngResource', 'ui.validate'])
 
   // 配置全局常量
   .constant('lcConfig', config)

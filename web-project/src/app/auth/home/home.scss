@@ -37,5 +37,13 @@ css标准:
 }
 .index-form-btn {
   width: 80%;
-  margin: 30px auto 10px auto;
+  margin: 16px auto 10px auto;
+}
+.index-err-block {
+  height: 18px;
+  width: 80%;
+  margin: 10px auto 0 auto;
+  .error {
+    color: $lcRed;
+  }
 }
