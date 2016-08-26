@@ -1,0 +1,23 @@
+<div class="container h100 weui-bg" id="container">
+	<div class="tabbar h100">
+		<div class="weui_tab">
+			<div class="weui_tab_bd">
+				<div ui-view></div>
+			</div>
+			<div class="weui_tabbar">
+				<a ui-sref="in.timing" ng-class="{weui_tabbar_item: true, weui_bar_item_on: weui_tabbar_timing}" ng-click="weui_tabbar_timing=true">
+					<div class="weui_tabbar_icon">
+						<img src="/assets/icons/timing.png" alt="">
+					</div>
+					<p class="weui_tabbar_label">时间</p>
+				</a>
+				<a ui-sref="in.account" ng-class="{weui_tabbar_item: true, weui_bar_item_on: !weui_tabbar_timing}" ng-click="weui_tabbar_timing=false">
+					<div class="weui_tabbar_icon">
+						<img src="/assets/icons/me.png" alt="">
+					</div>
+					<p class="weui_tabbar_label">我</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

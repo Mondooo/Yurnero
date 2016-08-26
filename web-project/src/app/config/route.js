@@ -9,10 +9,21 @@ export default ($stateProvider, $urlRouterProvider, $locationProvider) => {
       templateUrl: 'app/auth/home/home.html',
       controller: 'homeCtrl'
     })
-    .state('account', {
-      url: '/account',
-      templateUrl: 'app/account/account.html',
+    .state('in', {
+      abstract: true,
+      url: '/in',
+      templateUrl: 'app/in/in.html', 
+      controller: 'inCtrl'
+    })
+    .state('in.account', {
+      url: '^/account',
+      templateUrl: 'app/in/account/account.html',
       controller: 'accountCtrl'
+    })
+    .state('in.timing', {
+      url: '^/timing', 
+      templateUrl: 'app/in/time/timing.html',
+      controller: 'timingCtrl'
     })
     ;
 

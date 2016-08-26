@@ -10,8 +10,13 @@ $lcRed: #E82C4B;
 $wordGray: #787878;
 $wordBlack: #333333;
 
-$maxWidth: 980px;
+$maxWidth: 800px;
 $minWidth: 760px;
+
+* {
+	margin:0;
+	padding: 0;
+}
 
 html {
   font-family: 'Lantinghei SC', 'Microsoft Yahei', 'Hiragino Sans GB', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -20,8 +25,25 @@ html {
 
 body {
   width: 100%;
-  position: relative;
+  height: 100%;
   color: $wordBlack;
+  overflow-x:hidden;
+  // background-color:#fbf9fe
+}
+
+//配置angular-loading-bar的css样式
+#loading-bar .bar {
+  background-color: $wordBlack;
+}
+
+//统一背景色
+.weui-bg {
+  background-color: rgb(251, 250, 254);
+}
+
+//utils
+.h100 {
+	height: 100%;
 }
 
 
