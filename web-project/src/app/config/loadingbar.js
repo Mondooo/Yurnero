@@ -9,5 +9,5 @@ export default(cfpLoadingBarProvider) => {
 
 	cfpLoadingBarProvider.includeBar = true; //加载条
 
-	cfpLoadingBarProvider.latencyThreshold = 0; //最小时间(mm)
+	cfpLoadingBarProvider.latencyThreshold = 500; //最小时间(mm)
 };

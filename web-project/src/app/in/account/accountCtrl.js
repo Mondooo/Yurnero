@@ -10,12 +10,16 @@ export default ($scope, accountRes, ipRes, qService) => {
 	}, (err) => {
 
 	});
-
-	qService.httpGet(ipRes.ip, {
-		'ak': 'ChOc9kF1ztcQyKKGBYT2yXHCpyohE9Ll'
-	}, {}).then((success) => {
-		$scope.addressByIp = success.content.address;
+	qService.httpGet(accountRes.dp, {}, {}).then((data) => {
+		$scope.dp = data.data;
 	}, (err) => {
 
 	});
+	// qService.httpGet(ipRes.ip, {
+	// 	'ak': 'ChOc9kF1ztcQyKKGBYT2yXHCpyohE9Ll'
+	// }, {}).then((success) => {
+	// 	$scope.addressByIp = success.content.address;
+	// }, (err) => {
+
+	// });
 };

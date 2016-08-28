@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysqler = require('../modules/db/node-mysql');
+var qiniu = require('../modules/qiniu/qiniu');
 
 router.post('/api/account', function(req, res, next) {
 	var acc = req.get('X-Username');
@@ -25,6 +26,14 @@ router.get('/api/account', function(req, res, next) {
 		res.status(200).send({
 			data: results[0]
 		});
+	});
+});
+router.get('/api/account/dp', function(req, res, next) {
+	var downloadUrl = qiniu.getUrl('default.png');
+	res.send({
+		data: {
+			url: downloadUrl
+		}
 	});
 });
 module.exports = router;

@@ -27,5 +27,13 @@ export default ($resource, BASE_URL) => {
 				}
 			});
 		},
+		dp: (headers) => {
+			return $resource(BASE_URL+'/account/dp', {}, {
+				get: {
+					method: 'GET',
+					headers: headers,
+				}
+			});
+		},
 	};
 };
