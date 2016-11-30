@@ -1,12 +1,10 @@
-# Yurnero
+# whisperwind
 
-该项目基于Node.js Express Ejs Mysql服务器
+该项目基于Node.js Express Angularjs Mysql
 
 ## 功能
 
-* 登陆
-* 时间使用统计
-
+* 个人主页
 ## 本地开发调试
 
 首先确认本机已经安装 [Node.js](http://nodejs.org/) 运行环境
@@ -15,3 +13,4 @@
 
 ```
 $ npm install
+$ bower install
